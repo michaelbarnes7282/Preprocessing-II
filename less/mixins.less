@@ -1,1 +1,24 @@
 // Mixins in here
+.flex (@direction:row, @wrap:nowrap, @justify:space-between, @align:center) {
+    display:flex;
+    flex-direction: @direction;
+    flex-wrap: @wrap;
+    justify-content: @justify;
+    align-items: @align;
+}
+.custom-btn(@bg-color: @eastern-blue, @width:200px, @font-color:#fff){
+    .flex(@justify:center);
+    background-color: @bg-color;
+    margin: 0 10px 20px;
+    cursor: pointer;
+    width: @width;
+    height: 45px;
+    font-size: 2rem;
+    border-radius: 15px;
+    color:@font-color;
+    
+    &:hover{
+      background-color:@font-color;
+      color:@bg-color;
+    }
+}
